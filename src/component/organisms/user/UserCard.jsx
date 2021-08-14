@@ -3,10 +3,11 @@ import { Card } from "../../atoms/card/card";
 import { UserIconWithName } from "../../molecules/UserIconWithName";
 
 export const UserCard = (props) => {
-  const { user } = props;
+  const { user, isAdmin } = props;
+  console.log(isAdmin);
   return (
     <Card>
-      <UserIconWithName image={user.image} name={user.name} />
+      <UserIconWithName image={user.image} name={user.name} isAdmin={isAdmin} />
       <SDL>
         <dt>メール</dt>
         <dd>{user.email}</dd>
